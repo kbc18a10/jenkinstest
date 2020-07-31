@@ -23,8 +23,8 @@ public class AppTest {
     }
 
     // メールアドレスを誤った書式で設定した場合、例外が発生する
-    @Test(expected = NumberFormatException.class)
-    public void setEmailWithWrongFormatResultException() throws NumberFormatException{
+    @Test(expected = InputCheckException.class)
+    public void setEmailWithWrongFormatResultException() throws Exception{
         User user = new User();
         user.setEmail("testexample.com");
     }
